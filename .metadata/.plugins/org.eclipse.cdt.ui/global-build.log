@@ -1,0 +1,542 @@
+19:30:56 **** Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+    720	      0	   1568	   2288	    8f0	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+19:32:03 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'SysClockCongig':
+../Src/main.c:6:20: error: 'RCC_CR_HSEONJB' undeclared (first use in this function); did you mean 'RCC_CR_HSEON'?
+    6 |         RCC->CR |= RCC_CR_HSEONJB;// Enable HSE and wait for the HSE to become ready
+      |                    ^~~~~~~~~~~~~~
+      |                    RCC_CR_HSEON
+../Src/main.c:6:20: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+19:32:09 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+    720	      0	   1568	   2288	    8f0	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+21:22:21 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   1052	      0	   1568	   2620	    a3c	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+21:22:43 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-size  Clock_Control_LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1052	      0	   1568	   2620	    a3c	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+22:38:03 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+    856	      0	   1568	   2424	    978	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+22:38:49 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+    856	      0	   1568	   2424	    978	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+22:39:08 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   1052	      0	   1568	   2620	    a3c	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+22:39:30 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+    856	      0	   1568	   2424	    978	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+22:39:55 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+    856	      0	   1568	   2424	    978	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+22:40:12 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   1052	      0	   1568	   2620	    a3c	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+22:41:33 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-size  Clock_Control_LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1052	      0	   1568	   2620	    a3c	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+07:23:42 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Clock_Control_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Clock_Control_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Clock_Control_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Clock_Control_LED.elf
+ 
+arm-none-eabi-size  Clock_Control_LED.elf 
+arm-none-eabi-objdump -h -S Clock_Control_LED.elf  > "Clock_Control_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+   1052	      0	   1568	   2620	    a3c	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: Clock_Control_LED.list
+ 
+07:23:46 **** Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+    712	      0	   1568	   2280	    8e8	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:25:44 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+make -j12 all 
+arm-none-eabi-size  Clock_Control_LED.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1052	      0	   1568	   2620	    a3c	Clock_Control_LED.elf
+Finished building: default.size.stdout
+ 
+08:25:45 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      0	   1568	   2784	    ae0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:26:39 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      0	   1568	   2784	    ae0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:28:59 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1020	      0	   1568	   2588	    a1c	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:30:00 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1020	      0	   1568	   2588	    a1c	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:31:22 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1020	      0	   1568	   2588	    a1c	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:32:06 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1020	      0	   1568	   2588	    a1c	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:32:32 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1020	      0	   1568	   2588	    a1c	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:33:05 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      0	   1568	   2784	    ae0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:33:56 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      0	   1568	   2784	    ae0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:40:32 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      0	   1568	   2784	    ae0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:41:47 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1212	      0	   1568	   2780	    adc	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:47:47 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1212	      0	   1568	   2780	    adc	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:48:02 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-size  Timer_Delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1212	      0	   1568	   2780	    adc	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+08:53:34 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-size  Timer_Delay.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1212	      0	   1568	   2780	    adc	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+08:54:10 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      0	   1568	   2784	    ae0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+08:55:18 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1216	      0	   1568	   2784	    ae0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:01:17 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1172	      0	   1568	   2740	    ab4	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:02:08 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1172	      0	   1568	   2740	    ab4	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:03:03 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1168	      0	   1568	   2736	    ab0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:05:09 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1172	      0	   1568	   2740	    ab4	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:05:35 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1172	      0	   1568	   2740	    ab4	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:06:05 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1220	      0	   1568	   2788	    ae4	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:06:43 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1168	      0	   1568	   2736	    ab0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:07:49 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1168	      0	   1568	   2736	    ab0	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:08:13 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	   1568	   2732	    aac	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
+09:10:03 **** Incremental Build of configuration Debug for project Timer_Delay ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Timer_Delay.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\Timer_Delay\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Timer_Delay.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Timer_Delay.elf
+ 
+arm-none-eabi-size  Timer_Delay.elf 
+arm-none-eabi-objdump -h -S Timer_Delay.elf  > "Timer_Delay.list"
+   text	   data	    bss	    dec	    hex	filename
+   1172	      0	   1568	   2740	    ab4	Timer_Delay.elf
+Finished building: default.size.stdout
+ 
+Finished building: Timer_Delay.list
+ 
