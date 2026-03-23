@@ -1,0 +1,7 @@
+../Src/main.c:4:6:ADC_Init	1
+../Src/main.c:35:6:ADC_Enable	2
+../Src/main.c:44:6:ADC_Start	1
+../Src/main.c:58:6:ADC_WaitForConv	2
+../Src/main.c:61:9:ADC_getVal	1
+../Src/main.c:64:6:ADC_Disable	1
+../Src/main.c:70:5:main	1

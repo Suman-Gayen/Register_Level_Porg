@@ -1,4 +1,4 @@
-08:25:44 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
+22:34:02 **** Incremental Build of configuration Debug for project Clock_Control_LED ****
 make -j12 all 
 arm-none-eabi-size  Clock_Control_LED.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size  Clock_Control_LED.elf
 Finished building: default.size.stdout
  
 
-08:25:45 Build Finished. 0 errors, 0 warnings. (took 851ms)
+22:34:03 Build Finished. 0 errors, 0 warnings. (took 522ms)
 

@@ -1,0 +1,16 @@
+
+#include "RCC_Config.h"
+#include "I2C.h"
+#include "delay.h"
+
+int main(void)
+{
+
+
+
+
+	while(1){
+
+	}
+
+}

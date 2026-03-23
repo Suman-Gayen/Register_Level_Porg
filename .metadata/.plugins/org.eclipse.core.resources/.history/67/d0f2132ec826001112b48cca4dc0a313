@@ -1,0 +1,76 @@
+
+#include <stdint.h>
+#include "RCC_Config.h"
+#include "delay.h"
+
+
+void GPIO_Config(){
+	/*
+	 * 1. Enable GPIOA Clock
+	 * 2. Set the Required pin in the I/P mode
+	 * 3. Configure the PULL UP/ PULL DOWM According to requirement
+	*/
+	// 1. Enable GPIO Clock
+	RCC->AHB1ENR |= (1<<0);
+	// 2. Set the PA2 pin in the I/P mode
+	GPIOA->MODER &= ~((1<<4) | (1<<5));
+	// 3. Configure the PULL UP/ PULL DOWM According to requirement
+	GPIOA->PUPDR  |= (1<<4); // Set 01: Pull-up on 4:5 port
+	GPIOA->IDR |= (1<<2);
+}
+void Interrupt_Config(void){
+	/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
+
+	1. Enable the SYSCFG/AFIO bit in RCC register
+	2. Configure the EXTI configuration Register in the SYSCFG/AFIO
+	3. Disable the EXTI Mask using Interrupt Mask Register (IMR)
+	4. Configure the Rising Edge / Falling Edge Trigger
+	5. Set the Interrupt Priority
+	6. Enable the interrupt
+
+	********************************************************/
+	// 1. Enable the SYSCFG/AFIO bit in RCC register
+	RCC->APB1ENR |= (1<<14);
+	// 2. Configure the EXTI configuration Register in the SYSCFG/AFIO
+	SYSCFG->EXTICR[1] &= ~((1<<8) | (1<<9) | (1<<10) | (1<<11)); // 11 10 9 8
+	// 3. Disable the EXTI Mask using Interrupt Mask Register (IMR)
+	EXTI->IMR |= (1<<2);
+	// 4. Configure the Rising Edge / Falling Edge Trigger
+	EXTI->RTSR |= (1<<2); // Enable Rising Edge trigger
+	EXTI->RTSR &= ~(1<<2); // Disable Falling Edge Trigger
+	// 5. Set the Interrupt Priority
+	NVIC_SetPriority(EXTI2_IRQn,1);
+	// 6. Enable the interrupt
+	NVIC_EnableIRQ(EXTI2_IRQn);
+}
+
+int flag = 0;
+int count = 0;
+
+void EXTI2_IRQHandler(){
+	/*************>>>>>>> STEPS FOLLOWED <<<<<<<<************
+
+	1. Check the Pin, which triggered the Interrupt
+	2. Clear the Interrupt Pending Bit
+
+	********************************************************/
+	if(EXTI->PR & (1<<2)){	  // If the Interrupt is triggered by PA1
+		EXTI->PR &= ~(1<<2);  // Clear the Interrupt Pending bit
+		flag = 1;
+	}
+}
+int main(void)
+{
+	SysClockConfig();
+	GPIO_Config();
+	Interrupt_Config();
+
+	while(1){
+		if(flag){
+			count++;
+			delay_ms(1000);
+			flag = 0;
+		}
+
+	}
+}

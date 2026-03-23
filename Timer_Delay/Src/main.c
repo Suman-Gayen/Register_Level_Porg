@@ -12,10 +12,11 @@ void TIM6Config(void){
 //	1. Enable Timer Clock
 	RCC->APB1ENR |= (1<<4);
 //	2. Set the prescaler and ARR
-	TIM6->PSC = 90000-1; // 90MHZ/90 = 1MHZ = 1uS delay
+	TIM6->PSC = 90-1; // 90MHZ/90 = 1MHZ = 1uS delay
 	TIM6->ARR = 0XFFFF; // Max ARR value
 //	3. Enable the Timer and, and wait for the update Flag to set
 	TIM6->CR1 |= (1<<0); // Enable the Timer
+	TIM6->SR = 0;
 	while(!(TIM6->SR & (1<<0))); // UIF: Update interrupt flag.This bit is set by hardware on an update event. It is cleared by software.
 }
 void delay_us(uint16_t us){
@@ -27,11 +28,11 @@ void delay_us(uint16_t us){
 	TIM6->CNT = 0;
 	while(TIM6->CNT < us);
 }
-//void delay_ms(uint16_t ms){
-//	for( uint16_t i=0; i<ms; i++){
-//		delay_us(1000); // delay for 1 ms
-//	}
-//}
+void delay_ms(uint16_t ms){
+	for( uint16_t i=0; i<ms; i++){
+		delay_us(1000); // delay for 1 ms
+	}
+}
 void GPIO_Config(void){
 	RCC->AHB1ENR |= (1<<0); // Enable GPIOA
 	GPIOA->MODER |= (1<<10); // GPIOA PORT Set as O/P
@@ -49,9 +50,9 @@ int main(void)
 	GPIO_Config();
 	while(1){
 		GPIOA->BSRR |= (1<<5);  // set the Pin PA5
-		delay_us(1000);
+		delay_ms(1000);
 //		GPIOA->BSRR |= (1<<21); // or
 		GPIOA->BSRR |= (1<<5)<<16; // Reset the Pin PA5
-		delay_us(1000);
+		delay_ms(1000);
 	}
 }

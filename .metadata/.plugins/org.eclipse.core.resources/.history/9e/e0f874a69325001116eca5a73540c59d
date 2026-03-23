@@ -1,0 +1,18 @@
+/*
+ * I2C.h
+ *
+ *  Created on: Mar 22, 2026
+ *      Author: Suman Gayen
+ */
+
+#ifndef I2C_H_
+#define I2C_H_
+
+#include "stm32f446xx.h"
+
+extern void I2C_Config(void);
+extern void I2C_Start(void);
+extern void I2C_Stop(void);
+extern void I2C_WriteMulti(uint8_t *data, uint8_t size);
+
+#endif /* I2C_H_ */

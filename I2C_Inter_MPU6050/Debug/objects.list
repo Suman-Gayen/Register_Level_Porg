@@ -1,0 +1,7 @@
+"./Src/I2C.o"
+"./Src/RccConfig.o"
+"./Src/delay.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f446retx.o"
