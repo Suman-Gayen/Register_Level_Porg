@@ -10,7 +10,7 @@ This project implements a bare-metal ADC (Analog-to-Digital Converter) driver fo
 
 | Component | Details |
 |---|---|
-| Microcontroller | STM32F4xx (e.g., STM32F401, STM32F411) |
+| Microcontroller | STM32F4xx (e.g., STM32F411) |
 | ADC Peripheral | ADC1 |
 | GPIO Pins | PA1 (Channel 1), PA4 (Channel 4) |
 | Clock Source | System clock configured via `RCC_Config.h` |
