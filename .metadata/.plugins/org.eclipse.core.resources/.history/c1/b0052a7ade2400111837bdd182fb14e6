@@ -1,9 +1,0 @@
-
-#include <stdint.h>
-#include "RCC_Config.h"
-#include "delay.h"
-
-int main(void)
-{
-
-}

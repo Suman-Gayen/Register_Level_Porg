@@ -1,0 +1,33 @@
+#include <stdint.h>
+#include "stm32f446xx.h"
+#include "RCC_Config.h"
+
+
+void SPI_Config(void){
+	/*
+	 * 1. Enable SPI clock
+	 * 2. Configure the Control Register 1
+	 * 3. Configure the Control Register 2
+	*/
+	RCC->APB2ENR |= (1<<12);
+
+}
+
+
+int main(void)
+{
+
+
+
+
+
+
+
+
+
+
+
+	while(1){
+
+	}
+}

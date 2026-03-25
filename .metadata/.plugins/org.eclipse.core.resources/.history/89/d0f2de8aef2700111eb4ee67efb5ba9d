@@ -1,0 +1,22 @@
+#include <stdint.h>
+#include "stm32f446xx.h"
+#include "RCC_Config.h"
+
+
+int main(void)
+{
+
+
+
+
+
+
+
+
+
+
+
+	while(1){
+
+	}
+}

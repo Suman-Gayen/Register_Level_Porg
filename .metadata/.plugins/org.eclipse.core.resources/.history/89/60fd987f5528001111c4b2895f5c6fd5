@@ -1,0 +1,75 @@
+#include <stdint.h>
+#include "RCC_Config.h"
+#include "delay.h"
+
+// Global variables
+volatile int flag = 0;   // Flag set by interrupt
+volatile int count = 0;  // Counter incremented in main loop
+
+// ---------------- GPIO Configuration ----------------
+void GPIO_Config(void) {
+    /*
+     * Steps:
+     * 1. Enable GPIOA clock
+     * 2. Configure PA2 as input
+     * 3. Enable pull-up resistor
+     */
+
+    RCC->AHB1ENR |= (1 << 0);               // Enable GPIOA clock
+    GPIOA->MODER &= ~((1 << 4) | (1 << 5)); // Set PA2 as input (clear MODER[5:4])
+    GPIOA->PUPDR |= (1 << 4);               // Enable pull-up resistor (01 at PUPDR[5:4])
+}
+
+// ---------------- Interrupt Configuration ----------------
+void Interrupt_Config(void) {
+    /*
+     * Steps:
+     * 1. Enable SYSCFG clock
+     * 2. Map PA2 to EXTI2
+     * 3. Unmask EXTI2 interrupt
+     * 4. Configure rising edge trigger
+     * 5. Set NVIC priority
+     * 6. Enable EXTI2 interrupt in NVIC
+     */
+
+    RCC->APB2ENR |= (1 << 14);         // Enable SYSCFG clock
+
+    SYSCFG->EXTICR[0] &= ~(0xF << 8);  // Map EXTI2 to PA2 (clear bits 11:8)
+
+    EXTI->IMR |= (1 << 2);             // Unmask EXTI2
+    EXTI->RTSR |= (1 << 2);            // Enable rising edge trigger
+    EXTI->FTSR &= ~(1 << 2);           // Disable falling edge trigger
+
+    NVIC_SetPriority(EXTI2_IRQn, 1);   // Set priority
+    NVIC_EnableIRQ(EXTI2_IRQn);        // Enable EXTI2 interrupt
+}
+
+// ---------------- Interrupt Handler ----------------
+void EXTI2_IRQHandler(void) {
+    /*
+     * Steps:
+     * 1. Check if EXTI2 triggered
+     * 2. Clear pending bit
+     * 3. Set flag
+     */
+
+    if (EXTI->PR & (1 << 2)) {         // Check if EXTI2 pending
+        EXTI->PR |= (1 << 2);          // Clear pending bit
+        flag = 1;                      // Set flag
+    }
+}
+
+// ---------------- Main Function ----------------
+int main(void) {
+    SysClockConfig();   // Configure system clock
+    GPIO_Config();      // Initialize GPIO
+    Interrupt_Config(); // Initialize interrupts
+
+    while (1) {
+        if (flag) {         // If interrupt occurred
+            count++;        // Increment counter
+            delay_ms(1000); // Delay 1 second
+            flag = 0;       // Reset flag
+        }
+    }
+}

@@ -1,0 +1,8 @@
+../Src/main.c:6:6:SPI_Config	4	static
+../Src/main.c:22:6:GPIO_Config	4	static
+../Src/main.c:29:6:SPI_Enable	4	static
+../Src/main.c:32:6:SPI_Desable	4	static
+../Src/main.c:35:6:CS_Enable	4	static
+../Src/main.c:40:6:CS_Disable	4	static
+../Src/main.c:45:6:SPI_Transmit	24	static
+../Src/main.c:82:5:main	8	static

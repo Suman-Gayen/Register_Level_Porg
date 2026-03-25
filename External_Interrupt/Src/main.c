@@ -1,4 +1,5 @@
 #include <stdint.h>
+#include <stdio.h>
 #include "RCC_Config.h"
 #include "delay.h"
 
@@ -15,9 +16,9 @@ void GPIO_Config(void) {
      * 3. Enable pull-up resistor
      */
 
-    RCC->AHB1ENR |= (1 << 0);          // Enable GPIOA clock
+    RCC->AHB1ENR |= (1 << 0);               // Enable GPIOA clock
     GPIOA->MODER &= ~((1 << 4) | (1 << 5)); // Set PA2 as input (clear MODER[5:4])
-    GPIOA->PUPDR |= (1 << 4);          // Enable pull-up resistor (01 at PUPDR[5:4])
+    GPIOA->PUPDR |= (1 << 4);               // Enable pull-up resistor (01 at PUPDR[5:4])
 }
 
 // ---------------- Interrupt Configuration ----------------
@@ -66,10 +67,10 @@ int main(void) {
     Interrupt_Config(); // Initialize interrupts
 
     while (1) {
-        if (flag) {     // If interrupt occurred
-            count++;    // Increment counter
+        if (flag) {         // If interrupt occurred
+            count++;        // Increment counter
             delay_ms(1000); // Delay 1 second
-            flag = 0;   // Reset flag
+            flag = 0;       // Reset flag
         }
     }
 }

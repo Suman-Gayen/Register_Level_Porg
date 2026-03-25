@@ -1,17 +1,10 @@
-20:39:59 **** Incremental Build of configuration Debug for project External_Interrupt ****
+19:54:35 **** Incremental Build of configuration Debug for project External_Interrupt ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "External_Interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\External_Interrupt\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: External_Interrupt.elf
- 
 arm-none-eabi-size  External_Interrupt.elf 
-arm-none-eabi-objdump -h -S External_Interrupt.elf  > "External_Interrupt.list"
    text	   data	    bss	    dec	    hex	filename
-   1400	      0	   1576	   2976	    ba0	External_Interrupt.elf
+   5592	     92	   1908	   7592	   1da8	External_Interrupt.elf
 Finished building: default.size.stdout
  
-Finished building: External_Interrupt.list
- 
 
-20:40:01 Build Finished. 0 errors, 0 warnings. (took 1s.832ms)
+19:54:35 Build Finished. 0 errors, 0 warnings. (took 359ms)
 

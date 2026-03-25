@@ -1,0 +1,8 @@
+../Src/main.c:6:6:SPI_Config	1
+../Src/main.c:22:6:GPIO_Config	1
+../Src/main.c:29:6:SPI_Enable	1
+../Src/main.c:32:6:SPI_Desable	1
+../Src/main.c:35:6:CS_Enable	1
+../Src/main.c:40:6:CS_Disable	1
+../Src/main.c:45:6:SPI_Transmit	5
+../Src/main.c:82:5:main	1
