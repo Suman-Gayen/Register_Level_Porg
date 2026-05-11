@@ -1,95 +1,39 @@
-09:40:30 **** Incremental Build of configuration Debug for project SPI_Mastering ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'SPI_Transmit':
-../Src/main.c:73:17: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
-   73 |         uint8_t temp = SPI1->DR;
-      |                 ^~~~
-arm-none-eabi-gcc -o "SPI_Mastering.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\SPI_Mastering\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_Mastering.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: SPI_Mastering.elf
+07:59:36 **** Clean-only build of configuration Debug for project UART_Tx_Rx ****
+make -j12 clean 
+rm -rf ./Startup/startup_stm32f446retx.d ./Startup/startup_stm32f446retx.o
+rm -rf ./Src/RccConfig.cyclo ./Src/RccConfig.d ./Src/RccConfig.o ./Src/RccConfig.su ./Src/delay.cyclo ./Src/delay.d ./Src/delay.o ./Src/delay.su ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+rm -rf UART_Tx_Rx.elf UART_Tx_Rx.list UART_Tx_Rx.map default.size.stdout
  
-arm-none-eabi-size  SPI_Mastering.elf 
-arm-none-eabi-objdump -h -S SPI_Mastering.elf  > "SPI_Mastering.list"
+07:59:37 **** Build of configuration Debug for project UART_Tx_Rx ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/RccConfig.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/RccConfig.d" -MT"Src/RccConfig.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/RccConfig.o"
+arm-none-eabi-gcc "../Src/delay.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/delay.d" -MT"Src/delay.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/delay.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "UART_Tx_Rx.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\UART_Tx_Rx\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_Tx_Rx.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_Tx_Rx.elf
+ 
+arm-none-eabi-size  UART_Tx_Rx.elf 
+arm-none-eabi-objdump -h -S UART_Tx_Rx.elf  > "UART_Tx_Rx.list"
    text	   data	    bss	    dec	    hex	filename
-   1368	      4	   1564	   2936	    b78	SPI_Mastering.elf
+   1352	      0	   1568	   2920	    b68	UART_Tx_Rx.elf
 Finished building: default.size.stdout
  
-Finished building: SPI_Mastering.list
+Finished building: UART_Tx_Rx.list
  
-09:41:12 **** Incremental Build of configuration Debug for project SPI_Mastering ****
+07:59:52 **** Incremental Build of configuration Debug for project UART_Tx_Rx ****
 make -j12 all 
-arm-none-eabi-size  SPI_Mastering.elf 
+arm-none-eabi-size  UART_Tx_Rx.elf 
    text	   data	    bss	    dec	    hex	filename
-   1368	      4	   1564	   2936	    b78	SPI_Mastering.elf
+   1352	      0	   1568	   2920	    b68	UART_Tx_Rx.elf
 Finished building: default.size.stdout
  
-09:42:50 **** Incremental Build of configuration Debug for project SPI_Mastering ****
+08:27:50 **** Incremental Build of configuration Debug for project UART_Tx_Rx ****
 make -j12 all 
-arm-none-eabi-size  SPI_Mastering.elf 
+arm-none-eabi-size  UART_Tx_Rx.elf 
    text	   data	    bss	    dec	    hex	filename
-   1368	      4	   1564	   2936	    b78	SPI_Mastering.elf
-Finished building: default.size.stdout
- 
-09:43:08 **** Incremental Build of configuration Debug for project SPI_Mastering ****
-make -j12 all 
-arm-none-eabi-size  SPI_Mastering.elf 
-   text	   data	    bss	    dec	    hex	filename
-   1368	      4	   1564	   2936	    b78	SPI_Mastering.elf
-Finished building: default.size.stdout
- 
-19:48:30 **** Build of configuration Debug for project External_Interrupt ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "External_Interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\External_Interrupt\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: External_Interrupt.elf
- 
-arm-none-eabi-size  External_Interrupt.elf 
-arm-none-eabi-objdump -h -S External_Interrupt.elf  > "External_Interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-   5572	     92	   1908	   7572	   1d94	External_Interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: External_Interrupt.list
- 
-19:51:19 **** Incremental Build of configuration Debug for project External_Interrupt ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Device/ST/STM32F4xx/Include" -I"C:/Users/Suman Gayen/OneDrive/Desktop/STM32/stm32F4_header/CMSIS/Core/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "External_Interrupt.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\External_Interrupt\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External_Interrupt.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: External_Interrupt.elf
- 
-arm-none-eabi-size  External_Interrupt.elf 
-arm-none-eabi-objdump -h -S External_Interrupt.elf  > "External_Interrupt.list"
-   text	   data	    bss	    dec	    hex	filename
-   5592	     92	   1908	   7592	   1da8	External_Interrupt.elf
-Finished building: default.size.stdout
- 
-Finished building: External_Interrupt.list
- 
-19:52:48 **** Incremental Build of configuration Debug for project External_Interrupt ****
-make -j12 all 
-arm-none-eabi-size  External_Interrupt.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5592	     92	   1908	   7592	   1da8	External_Interrupt.elf
-Finished building: default.size.stdout
- 
-19:53:17 **** Incremental Build of configuration Debug for project External_Interrupt ****
-make -j12 all 
-arm-none-eabi-size  External_Interrupt.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5592	     92	   1908	   7592	   1da8	External_Interrupt.elf
-Finished building: default.size.stdout
- 
-19:53:55 **** Incremental Build of configuration Debug for project External_Interrupt ****
-make -j12 all 
-arm-none-eabi-size  External_Interrupt.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5592	     92	   1908	   7592	   1da8	External_Interrupt.elf
-Finished building: default.size.stdout
- 
-19:54:35 **** Incremental Build of configuration Debug for project External_Interrupt ****
-make -j12 all 
-arm-none-eabi-size  External_Interrupt.elf 
-   text	   data	    bss	    dec	    hex	filename
-   5592	     92	   1908	   7592	   1da8	External_Interrupt.elf
+   1352	      0	   1568	   2920	    b68	UART_Tx_Rx.elf
 Finished building: default.size.stdout
  

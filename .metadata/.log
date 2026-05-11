@@ -1,4 +1,4 @@
-!SESSION 2026-03-25 07:02:18.961 -----------------------------------------------
+!SESSION 2026-03-29 22:16:17.785 -----------------------------------------------
 eclipse.buildId=Version 1.19.0
 java.version=21.0.3
 java.vendor=Eclipse Adoptium
@@ -6,406 +6,183 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 This is a continuation of log file C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\.metadata\.bak_0.log
-Created Time: 2026-03-25 07:02:21.896
-!SESSION 2026-03-25 07:02:18.961 -----------------------------------------------
+Created Time: 2026-03-29 22:16:27.594
+!SESSION 2026-03-29 22:16:17.785 -----------------------------------------------
 eclipse.buildId=Version 1.19.0
 java.version=21.0.3
 java.vendor=Eclipse Adoptium
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY org.eclipse.core.resources 2 10035 2026-03-25 07:02:21.896
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-03-25 07:02:27.630
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-03-29 22:16:27.595
 !MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
 
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-03-25 07:02:27.631
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-03-29 22:16:27.597
 !MESSAGE Log4j2 initialized with config file C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\.metadata\.log4j2.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-03-25 07:02:40.526
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-03-29 22:16:39.485
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2026-03-30 17:09:19.639 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-03-30 17:10:58.366
+!MESSAGE Log4j2 initialized with config file C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\.metadata\.log4j2.xml
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2026-03-30 17:11:09.974
+!MESSAGE Removing PartDescriptorImpl with the "com.st.stm32cube.common.mx.views.OutputsView" id and the "Outputs" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-03-30 17:11:19.244
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2026-03-25 07:03:03.925
-!MESSAGE Connection to https://sw-center.st.com/stm32cubeide/openstlinux/updatesite1/p2.index failed on null. Retry attempt 0 started
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 17:11:50.181
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-25 07:03:04.166
-!MESSAGE Unable to connect to repository https://sw-center.st.com/stm32cubeide/openstlinux/updatesite1/compositeContent.xml
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2026-03-25 07:03:04.172
-!MESSAGE Connection to https://sw-center.st.com/stm32cubeide/updatesite1/p2.index failed on null. Retry attempt 0 started
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 17:11:50.182
+!MESSAGE port: COM4
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-25 07:03:04.388
-!MESSAGE Unable to connect to repository https://sw-center.st.com/stm32cubeide/updatesite1/compositeContent.xml
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 17:14:31.618
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2026-03-25 07:03:04.393
-!MESSAGE Connection to https://download.eclipse.org/tools/cdt/releases/latest/p2.index failed on null. Retry attempt 0 started
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-25 07:03:04.609
-!MESSAGE Unable to connect to repository https://download.eclipse.org/tools/cdt/releases/latest/compositeContent.xml
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 17:14:31.619
+!MESSAGE port: 
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2026-03-25 07:03:04.613
-!MESSAGE Connection to https://download.eclipse.org/releases/2024-09/p2.index failed on null. Retry attempt 0 started
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 17:14:55.480
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
 
-!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2026-03-25 07:03:04.830
-!MESSAGE Unable to connect to repository https://download.eclipse.org/releases/2024-09/compositeContent.xml
-!STACK 0
-java.net.ConnectException
-	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
-	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(AsyncSSLConnection.java:56)
-	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Http2Connection.java:468)
-	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Http2ClientImpl.java:134)
-	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(ExchangeImpl.java:94)
-	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Exchange.java:386)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Exchange.java:570)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Exchange.java:423)
-	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Exchange.java:415)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:413)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(MultiExchange.java:454)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
-	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(CompletableFuture.java:950)
-	at java.base/java.util.concurrent.CompletableFuture.handle(CompletableFuture.java:2372)
-	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(MultiExchange.java:444)
-	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(MultiExchange.java:346)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1150)
-	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.nio.channels.UnresolvedAddressException
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:137)
-	at java.base/sun.nio.ch.Net.checkAddress(Net.java:145)
-	at java.base/sun.nio.ch.SocketChannelImpl.checkRemote(SocketChannelImpl.java:842)
-	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:865)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
-	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
-	... 21 more
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 09:41:21.306
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 17:14:55.481
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-30 17:15:16.052
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 09:42:58.148
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 19:13:56.385
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 09:43:16.266
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
 
-!ENTRY org.eclipse.core.resources 2 10035 2026-03-25 09:54:09.042
-!MESSAGE The workspace will exit with unsaved changes in this session.
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 19:13:56.386
+!MESSAGE port: 
 
-!ENTRY org.eclipse.core.jobs 4 2 2026-03-25 09:54:09.091
-!MESSAGE An internal error occurred during: "Execute Debug Command".
-!STACK 0
-org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
-	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:119)
-	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:185)
-	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:206)
-	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:661)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
-	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
-	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
-	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
-	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 19:14:40.752
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
 
-!ENTRY org.eclipse.core.jobs 2 2 2026-03-25 09:54:09.418
-!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob RUNNING
-	 at java.base/java.lang.Object.wait0(Native Method)
-	 at java.base/java.lang.Object.wait(Object.java:366)
-	 at java.base/java.lang.Object.wait(Object.java:339)
-	 at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:140)
-	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:91)
-	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:113)
-	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob.run(GdbBasicCliConsole.java:248)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 19:14:40.753
+!MESSAGE port: COM4
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-03-30 19:15:45.610
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.equinox.internal.p2.transport.ecf.FileReader RUNNING
+	 at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+	 at java.base/java.util.concurrent.locks.LockSupport.park(LockSupport.java:371)
+	 at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:519)
+	 at java.base/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3780)
+	 at java.base/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3725)
+	 at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1746)
+	 at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	 at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.current(ResponseSubscribers.java:458)
+	 at java.net.http/jdk.internal.net.http.ResponseSubscribers$HttpResponseInputStream.read(ResponseSubscribers.java:508)
+	 at java.base/java.io.FilterInputStream.read(FilterInputStream.java:119)
+	 at java.base/java.io.FilterInputStream.read(FilterInputStream.java:95)
+	 at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:180)
+	 at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
 	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-!SESSION 2026-03-25 19:43:39.595 -----------------------------------------------
-eclipse.buildId=Version 1.19.0
-java.version=21.0.3
+!SESSION 2026-03-30 19:30:19.932 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
 java.vendor=Eclipse Adoptium
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg
 
-!ENTRY org.eclipse.core.resources 2 10035 2026-03-25 19:43:42.365
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2026-03-25 19:43:48.614
-!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-03-25 19:43:48.616
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-03-30 19:30:27.558
 !MESSAGE Log4j2 initialized with config file C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\.metadata\.log4j2.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-03-25 19:44:10.234
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 19:30:39.282
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-30 19:30:39.282
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-03-30 19:30:39.596
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 19:48:45.127
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-30 20:08:23.975
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 19:51:29.595
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-30 20:08:48.665
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 19:52:56.194
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-30 20:09:12.068
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 19:53:25.025
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-31 00:07:21.797
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-31 00:07:21.797
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-31 00:07:22.344
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-03-31 00:07:22.344
+!MESSAGE port: COM4
+!SESSION 2026-05-01 07:58:21.029 -----------------------------------------------
+eclipse.buildId=Version 2.1.1
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-01 07:58:28.204
+!MESSAGE Log4j2 initialized with config file C:\Users\Suman Gayen\OneDrive\Desktop\STM32\Github\Register_Level_Porg\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-01 07:58:39.609
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-01 07:58:39.611
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-01 07:58:39.911
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-05-01 07:59:59.880
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
 
-!ENTRY org.eclipse.core.jobs 4 2 2026-03-25 19:53:58.292
-!MESSAGE An internal error occurred during: "Suspend monitor job.".
-!STACK 0
-java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask@789a1a03[Not completed, task = java.util.concurrent.Executors$RunnableAdapter@28018ee6[Wrapped task = org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_12$MonitorSuspendJob$2@341fe85e]] rejected from org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor@73d8df2d[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 2462]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2081)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:841)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.delayedExecute(ScheduledThreadPoolExecutor.java:340)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.schedule(ScheduledThreadPoolExecutor.java:562)
-	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.schedule(DefaultDsfExecutor.java:450)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor.submit(ScheduledThreadPoolExecutor.java:715)
-	at org.eclipse.cdt.dsf.concurrent.DefaultDsfExecutor.submit(DefaultDsfExecutor.java:482)
-	at org.eclipse.cdt.dsf.gdb.service.GDBRunControl_7_12$MonitorSuspendJob.run(GDBRunControl_7_12.java:358)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-01 08:20:40.597
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+COM3
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 19:54:03.461
-!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
 
-!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-03-25 19:54:43.563
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-01 08:20:40.616
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-01 08:20:40.617
+!MESSAGE port: COM3
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-01 08:27:05.575
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM4
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-01 08:27:05.577
+!MESSAGE port: COM4
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2026-05-01 08:27:59.499
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 16000000; div: 8
